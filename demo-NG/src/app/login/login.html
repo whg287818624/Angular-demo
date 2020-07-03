@@ -1,0 +1,12 @@
+<style type="text/css">
+  div{ text-align: center; }
+</style>
+
+<i-head></i-head>
+<div class="login">
+  <h1>登录</h1>
+  <button (click)="toHome()">回首页</button>
+  <input type="text" #action>
+  <button (click)="sendMessage(action.value)">发送</button>
+
+</div>

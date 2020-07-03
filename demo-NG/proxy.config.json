@@ -1,0 +1,8 @@
+{
+  "/": {
+    "target": "https://api.asilu.com",
+    "secure": false,
+    "logLevel":"debug",
+    "changeOrigin":true
+  }
+}

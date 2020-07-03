@@ -1,0 +1,36 @@
+<style type="text/css">
+  div{ text-align: center; }
+  li{ list-style: none; }
+  .bg{ background-color: red;color: #fff;}
+  .bg2{ background-color: blue;color: #fff;}
+</style>
+
+<i-head [num]="num"></i-head>
+<div class="home">
+  <h1>首页</h1>
+  <p>{{name}}今年{{num}}岁</p>
+  <p>{{address | json}}</p>
+  <button (click)="getUser()">请求</button>
+  <button (click)="iclick()">点击</button>
+  <button (click)="toLogin()">去登录</button>
+
+  <ul *ngFor="let x of arr">
+    <li [ngClass]="{bg: x=='厦门',bg2: x=='龙岩'}">{{x}}</li>
+  </ul>
+
+  <div>
+    <input type="text" name="myVal" [(ngModel)]="myVal">
+    <p>{{myVal}}</p>
+  </div>
+</div>
+
+<!-- 模板引用变量 -->
+<!-- phone 引用了 input 元素，并将 `value` 传递给事件句柄 -->
+<input #phone placeholder="phone number">
+<button (click)="callPhone(phone.value)">Call</button>
+
+<!-- fax 引用了 input 元素，并将  `value` 传递给事件句柄  -->
+<input ref-fax placeholder="fax number">
+<button (click)="callFax(fax.value)">Fax</button>
+
+<app-my-counter></app-my-counter>
